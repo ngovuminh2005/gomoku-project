@@ -1,6 +1,6 @@
 const BOARD_SIZE = 20;
 const WIN_LENGTH = 5;
-const API_URL = "http://34.80.104.162:5000"; // Thêm :5000 vào đuôi
+const API_URL = "http://{your_ip_address}:5000"; // Thêm :5000 vào đuôi
 
 const board = document.getElementById("board");
 const results = document.querySelector("#results");
