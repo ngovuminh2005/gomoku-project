@@ -82,15 +82,3 @@ project/
     ├── style.css           # Định dạng giao diện
     └── script.js           # Logic Frontend & kết nối Socket
 ```
-
-## 🛠 Khắc phục lỗi thường gặp
-
-1. **Lỗi `Permission denied` khi chạy ./run.sh:**
-   - Hãy chạy lệnh `chmod +x run.sh` trước.
-
-2. **Lỗi không kết nối được Server (Frontend không phản hồi):**
-   - Kiểm tra xem terminal chạy `server.py` có báo lỗi gì không.
-   - Đảm bảo `API_URL` trong file `frontend/script.js` là `http://127.0.0.1:5000`.
-
-3. **Bot không đánh trả:**
-   - Có thể do chưa biên dịch file C++. Hãy kiểm tra thư mục `backend/modules/models/` xem đã có các file thực thi (màu xanh lá trên Linux hoặc .exe trên Windows) chưa.
