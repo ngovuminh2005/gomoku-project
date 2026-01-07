@@ -14,55 +14,13 @@
 
 ## 🚀 Hướng dẫn Cài đặt
 
-### 1. Cài đặt thư viện Python
+###  Cài đặt thư viện Python
 Di chuyển vào thư mục `backend` và cài đặt các thư viện cần thiết:
 
 ```bash
 cd backend
 pip install flask flask-socketio flask-cors eventlet
 ```
-
-### 2. Biên dịch AI Engine (C++)
-Hệ thống cần biên dịch mã nguồn C++ thành các file thực thi (binary) để Python có thể gọi được.
-
-#### 👉 Đối với Linux / MacOS / WSL
-Chạy script tự động đã được chuẩn bị sẵn:
-
-```bash
-cd backend
-chmod +x run.sh
-./run.sh
-```
-
-#### 👉 Đối với Windows (Command Prompt / PowerShell)
-Nếu không dùng WSL, bạn cần biên dịch thủ công bằng lệnh sau (đảm bảo đã cài g++):
-
-```cmd
-cd backend
-g++ -O3 modules/models/bot_level_1.cpp -o modules/models/bot_level_1.exe
-g++ -O3 modules/models/bot_level_2.cpp -o modules/models/bot_level_2.exe
-g++ -O3 modules/models/bot_level_3.cpp -o modules/models/bot_level_3.exe
-g++ -O3 modules/models/bot_final.cpp -o modules/models/bot_final.exe
-g++ -O3 modules/logic/engine.cpp -o modules/logic/engine.exe
-```
-*Lưu ý: Nếu chạy trên Windows thuần, bạn cần sửa lại đường dẫn trong file `server.py` và `config.py` để trỏ đúng đến file `.exe`.*
-
----
-
-## ▶️ Hướng dẫn Chạy ứng dụng
-
-### Bước 1: Khởi động Backend Server
-Tại thư mục `backend`, chạy lệnh:
-
-```bash
-python server.py
-```
-Nếu thành công, bạn sẽ thấy thông báo server đang chạy tại `http://127.0.0.1:5000`.
-
-### Bước 2: Mở Giao diện (Frontend)
-1. Đi tới thư mục `frontend`.
-2. Mở file `index.html` bằng trình duyệt web bất kỳ (Chrome, Edge, Firefox...).
-3. Chọn chế độ chơi và bắt đầu trải nghiệm!
 
 ---
 
